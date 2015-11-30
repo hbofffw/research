@@ -16,17 +16,17 @@ subplot(4,1,3); plot(t,C3);title(['x=',num2str(x3)]);
 subplot(4,1,4); plot(t,C4);title(['x=',num2str(x4)]);
 
 fid=fopen('C1.txt','wt');
-fprintf(fid,'%g, ',C1);
+fprintf(fid,'%2f, ',C1);
 fclose(fid);
 
 fid=fopen('C2.txt','wt');
-fprintf(fid,'%g, ',C2);
+fprintf(fid,'%2f, ',C2);
 fclose(fid);
 
 fid=fopen('C3.txt','wt');
-fprintf(fid,'%g, ',C3);
+fprintf(fid,'%2f, ',C3);
 fclose(fid);
 
 fid=fopen('C4.txt','wt');
-fprintf(fid,'%g, ',C4);
+fprintf(fid,'%2f, ',C4);
 fclose(fid);
