@@ -1,7 +1,14 @@
 t = 0:0.1:100;
-u=0.8;
+%u=0.5;
 D=0.123;
 M=50;
+fprintf('Input u:\n');
+u = input('input the wind speed\n');
+if u == 0;
+    t = 0:1:10000;
+else 
+    t = 0:0.01:(1/u)*100;
+end
 x1 = 10;
 x2 = 20;
 x3 = 30;
