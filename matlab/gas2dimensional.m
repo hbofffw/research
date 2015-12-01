@@ -17,10 +17,15 @@ C1 = (M./(2*sqrt((D*pi).*t))).*exp(-(x1-u*t).^2./((D*4).*t));
 C2 = (M./(2*sqrt((D*pi).*t))).*exp(-(x2-u*t).^2./((D*4).*t));
 C3 = (M./(2*sqrt((D*pi).*t))).*exp(-(x3-u*t).^2./((D*4).*t));
 C4 = (M./(2*sqrt((D*pi).*t))).*exp(-(x4-u*t).^2./((D*4).*t));
-subplot(4,1,1); plot(t,C1);title(['x=',num2str(x1)]);
-subplot(4,1,2); plot(t,C2);title(['x=',num2str(x2)]);
-subplot(4,1,3); plot(t,C3);title(['x=',num2str(x3)]);
-subplot(4,1,4); plot(t,C4);title(['x=',num2str(x4)]);
+
+title1 = sprintf('x= %dm',x1);
+title2 = sprintf('x= %dm',x2);
+title3 = sprintf('x= %dm',x3);
+title4 = sprintf('x= %dm',x4);
+subplot(4,1,1); plot(t,C1);title(title1);
+subplot(4,1,2); plot(t,C2);title(title2);
+subplot(4,1,3); plot(t,C3);title(title3);
+subplot(4,1,4); plot(t,C4);title(title4);
 
 fid=fopen('C1.txt','wt');
 fprintf(fid,'%2f, ',C1);
